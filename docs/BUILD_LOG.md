@@ -169,3 +169,12 @@
 - Copied upstream files as-is, including text, binary assets, fonts, test fixtures, documentation, and license files; excluded only each repository's internal  metadata.
 - Updated : PDF.js is the first choice; pdf-lib is optional; neither library is currently used by Lux Omni.
 - No Lux Omni application integration code was added.
+
+## 2026-10-15 — Verify and complete upstream library import
+
+- Re-synchronized both vendor directories from the pinned upstream commits to include every tracked upstream file, including files ignored by the parent repository's default Git rules.
+- PDF.js source commit: `fcde2e1f9a960e9d234caea43746d6223cd054df`.
+- pdf-lib source commit: `93dd36e85aa659a3bca09867d2d8fac172501fbe`.
+- The import step verifies copied file counts against each source Git tree before committing.
+- Updated `site/vendor/README.md` using a literal heredoc to preserve all Markdown and commit IDs.
+- Both libraries remain unused by application code.
