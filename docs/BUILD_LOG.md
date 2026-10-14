@@ -1,0 +1,118 @@
+## 2026-10-14 — File-map scaffolding
+
+- Compared the tracked `main` branch with `FileMap.md`.
+- Created 107 empty placeholder files for map entries that were missing.
+- No implementation code was added.
+- Existing files were skipped and left unchanged. The only existing file updated was this build log, appended as requested.
+- No files were deleted, renamed, or replaced.
+- The icon files are zero-byte placeholders, not usable image assets yet.
+
+### Files created
+
+- `docs/MIGRATION_LOG.md`
+- `dev-tools/remove-comments.js`
+- `clipboard.html`
+- `privacy.html`
+- `site/icons/lux-pdf-viewer-icon.svg`
+- `site/icons/lux-pdf-viewer-icon-64.png`
+- `site/icons/lux-pdf-viewer-icon-256.png`
+- `site/components/pdf-editor.css`
+- `site/components/snipping-tool.css`
+- `site/components/dropbox-ui.css`
+- `site/components/temporary-log.css`
+- `site/js/main.js`
+- `site/js/core/EventBus.js`
+- `site/js/core/Store.js`
+- `site/js/core/AdapterRegistry.js`
+- `site/js/core/ServiceRegistry.js`
+- `site/js/core/ProviderRegistry.js`
+- `site/js/core/Constants.js`
+- `site/js/models/WorkspaceFile.js`
+- `site/js/models/WorkspaceState.js`
+- `site/js/models/ProviderStatus.js`
+- `site/js/models/ProviderConfig.js`
+- `site/js/models/ViewportItem.js`
+- `site/js/providers/shared/StorageAdapter.js`
+- `site/js/providers/shared/AuthProvider.js`
+- `site/js/providers/shared/SyncProvider.js`
+- `site/js/providers/shared/ProviderFactory.js`
+- `site/js/providers/shared/ProviderTypes.js`
+- `site/js/providers/shared/ProviderError.js`
+- `site/js/providers/local/LocalStorageAdapter.js`
+- `site/js/providers/local/LocalFilePicker.js`
+- `site/js/providers/local/LocalDownload.js`
+- `site/js/providers/dropbox/DropboxApi.js`
+- `site/js/providers/dropbox/DropboxAuth.js`
+- `site/js/providers/dropbox/DropboxStorageAdapter.js`
+- `site/js/providers/dropbox/DropboxSync.js`
+- `site/js/providers/dropbox/DropboxConfig.js`
+- `site/js/providers/gdrive/GoogleDriveApi.js`
+- `site/js/providers/gdrive/GoogleDriveAuth.js`
+- `site/js/providers/gdrive/GoogleDriveStorageAdapter.js`
+- `site/js/providers/gdrive/GoogleDriveSync.js`
+- `site/js/providers/gdrive/GoogleDriveConfig.js`
+- `site/js/providers/onedrive/OneDriveApi.js`
+- `site/js/providers/onedrive/OneDriveAuth.js`
+- `site/js/providers/onedrive/OneDriveStorageAdapter.js`
+- `site/js/providers/onedrive/OneDriveSync.js`
+- `site/js/providers/onedrive/OneDriveConfig.js`
+- `site/js/providers/github/GitHubApi.js`
+- `site/js/providers/github/GitHubAuth.js`
+- `site/js/providers/github/GitHubStorageAdapter.js`
+- `site/js/providers/github/GitHubSync.js`
+- `site/js/providers/github/GitHubConfig.js`
+- `site/js/providers/s3/S3Api.js`
+- `site/js/providers/s3/S3Auth.js`
+- `site/js/providers/s3/S3StorageAdapter.js`
+- `site/js/providers/s3/S3Sync.js`
+- `site/js/providers/s3/S3Config.js`
+- `site/js/services/FileManager.js`
+- `site/js/services/ConnectionManager.js`
+- `site/js/services/SyncManager.js`
+- `site/js/services/ProviderManager.js`
+- `site/js/services/DownloadService.js`
+- `site/js/services/CaptureService.js`
+- `site/js/services/ClipboardDb.js`
+- `site/js/services/ClipboardService.js`
+- `site/js/adapters/content/AdapterFactory.js`
+- `site/js/adapters/content/PdfAdapter.js`
+- `site/js/adapters/content/ImageAdapter.js`
+- `site/js/adapters/content/VideoAdapter.js`
+- `site/js/adapters/content/AudioAdapter.js`
+- `site/js/adapters/content/MarkdownAdapter.js`
+- `site/js/adapters/content/TextAdapter.js`
+- `site/js/adapters/content/HtmlAdapter.js`
+- `site/js/adapters/content/CsvAdapter.js`
+- `site/js/adapters/content/JsonAdapter.js`
+- `site/js/adapters/content/YouTubeAdapter.js`
+- `site/js/viewport/WorkspaceViewport.js`
+- `site/js/viewport/ViewportController.js`
+- `site/js/viewport/ViewportLoader.js`
+- `site/js/viewport/ViewportHistory.js`
+- `site/js/viewport/ViewportActions.js`
+- `site/js/ui/WorkspaceUI.js`
+- `site/js/ui/SmartToolbarUI.js`
+- `site/js/ui/ToastUI.js`
+- `site/js/ui/SnippingEditorUI.js`
+- `site/js/ui/FilePickerUI.js`
+- `site/js/ui/ProviderMenuUI.js`
+- `site/js/ui/ProviderStatusUI.js`
+- `site/js/ui/ConnectionBadgeUI.js`
+- `site/js/ui/DropboxModalUI.js`
+- `site/js/ui/GoogleDriveModalUI.js`
+- `site/js/ui/OneDriveModalUI.js`
+- `site/js/state/WorkspaceState.js`
+- `site/js/state/ProviderState.js`
+- `site/js/state/SessionState.js`
+- `site/js/state/EditorState.js`
+- `site/js/storage/IndexedDbRepository.js`
+- `site/js/storage/LocalStorageRepository.js`
+- `site/js/storage/SessionRepository.js`
+- `site/js/storage/CacheRepository.js`
+- `site/js/utils/FileClassifier.js`
+- `site/js/utils/MimeTypes.js`
+- `site/js/utils/Validators.js`
+- `site/js/utils/Security.js`
+- `site/js/utils/Logger.js`
+- `site/js/utils/Helpers.js`
+- `site/js/utils/FeatureFlags.js`
