@@ -1,0 +1,103 @@
+name: One-time vendor import
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  import-vendor-sources:
+    if: contains(github.event.head_commit.message, '[run-vendor-import]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out Lux Omni
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Import full upstream repositories without Git metadata
+        shell: bash
+        env:
+          PDFJS_COMMIT: fcde2e1f9a960e9d234caea43746d6223cd054df
+          PDFLIB_COMMIT: 93dd36e85aa659a3bca09867d2d8fac172501fbe
+        run: |
+          set -euo pipefail
+
+          clone_at_commit() {
+            local url="$1"
+            local commit="$2"
+            local destination="$3"
+
+            mkdir -p "$destination"
+            git -C "$destination" init
+            git -C "$destination" remote add origin "$url"
+            git -C "$destination" fetch --depth=1 origin "$commit"
+            git -C "$destination" checkout --detach FETCH_HEAD
+            test "$(git -C "$destination" rev-parse HEAD)" = "$commit"
+          }
+
+          clone_at_commit https://github.com/mozilla/pdf.js.git "$PDFJS_COMMIT" "$RUNNER_TEMP/pdfjs-source"
+          clone_at_commit https://github.com/Hopding/pdf-lib.git "$PDFLIB_COMMIT" "$RUNNER_TEMP/pdf-lib-source"
+
+          # Remove Git submodule entries, then replace their mount points with ordinary directories.
+          git rm -f --cached site/vendor/pdf.js site/vendor/pdf-lib
+          rm -rf site/vendor/pdf.js site/vendor/pdf-lib
+          mkdir -p site/vendor/pdf.js site/vendor/pdf-lib
+
+          # Copy all tracked upstream working-tree content, including binary assets, excluding .git metadata.
+          rsync -a --exclude='/.git' "$RUNNER_TEMP/pdfjs-source/" site/vendor/pdf.js/
+          rsync -a --exclude='/.git' "$RUNNER_TEMP/pdf-lib-source/" site/vendor/pdf-lib/
+
+          # Keep the parent repository's .gitmodules file out of the final tree.
+          rm -f .gitmodules
+
+          cat > site/vendor/README.md <<EOF
+          # Third-party libraries
+
+          ## Current status
+
+          Neither library is currently used by Lux Omni. The repositories are vendored for evaluation only. No application imports, runtime loading, PDF viewing, PDF editing, or worker configuration has been implemented.
+
+          ## Order of consideration
+
+          1. **PDF.js (Mozilla) — primary choice.** Evaluate first for PDF loading, parsing, rendering, and viewing inside Lux Omni.
+          2. **pdf-lib (Hopding) — optional secondary library.** Consider only if a required PDF creation or modification feature cannot be provided appropriately by the chosen PDF.js workflow.
+          3. **Remove what is not needed.** If pdf-lib proves unnecessary, delete `site/vendor/pdf-lib/` from Lux Omni. Its upstream repository remains available at the link below.
+
+          ## Imported upstream snapshots
+
+          - PDF.js: https://github.com/mozilla/pdf.js — commit `$PDFJS_COMMIT` — Apache-2.0
+          - pdf-lib: https://github.com/Hopding/pdf-lib — commit `$PDFLIB_COMMIT` — MIT
+
+          The library source files and upstream documentation are copied from the pinned upstream commits without application-specific edits. Git metadata is not included. Root library README and license files are preserved inside each library directory.
+
+          ## Integration reminder
+
+          Having source code in this folder does **not** make either library active in the website. Select and configure suitable browser-ready build files and, for PDF.js, its matching worker before use. Do not wire either library into the app until implementation is explicitly planned and tested.
+          EOF
+
+          cat >> docs/BUILD_LOG.md <<EOF
+
+          ## 2026-10-15 — Import full PDF library repositories
+
+          - Imported the complete tracked contents of Mozilla PDF.js into `site/vendor/pdf.js/` from upstream commit `$PDFJS_COMMIT`.
+          - Imported the complete tracked contents of Hopding pdf-lib into `site/vendor/pdf-lib/` from upstream commit `$PDFLIB_COMMIT`.
+          - Both directories are now ordinary tracked files, not Git submodules. Removed the temporary `.gitmodules` configuration.
+          - Copied upstream files as-is, including text, binary assets, fonts, test fixtures, documentation, and license files; excluded only each repository's internal `.git` metadata.
+          - Updated `site/vendor/README.md`: PDF.js is the first choice; pdf-lib is optional; neither library is currently used by Lux Omni.
+          - No Lux Omni application integration code was added.
+          EOF
+
+          # Delete this temporary workflow as part of the vendoring commit.
+          rm -f .github/workflows/import-vendor-libraries.yml
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Import full PDF.js and pdf-lib source into vendor"
+          git push origin HEAD:main
