@@ -169,3 +169,11 @@
 - Neither library is currently used by the Lux Omni application. No runtime imports, workers, or integration code were added.
 - Final verified vendor source tree is present in commit `9738d7be828c8fb3e29a9612743210de3a8df1b0`.
 
+## 2026-10-15 — Add PDF workflow and engineering diagrams
+
+- Added `docs/diagrams/PDF_WORKFLOW_FLOWCHART.md` with an editable Mermaid flowchart for the planned PDF opening, rendering, conditional modification, verification, and save flow.
+- Added `docs/diagrams/LUX_OMNI_PDF_ENGINEERING.svg`, a vector engineering block diagram of the same architecture.
+- Both diagrams explicitly mark the integration as planned only: the vendored PDF.js and pdf-lib repositories are not currently used by application code.
+- PDF.js is shown as the primary viewing/rendering path. pdf-lib is shown as optional and only warranted by a specific supported PDF-write requirement.
+- No application source files or vendor-library source files were changed.
+
