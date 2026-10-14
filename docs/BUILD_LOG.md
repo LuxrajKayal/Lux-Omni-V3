@@ -153,28 +153,19 @@
 - `site/js/utils/Helpers.js`
 - `site/js/utils/FeatureFlags.js`
 
-## 2026-10-15 — Add PDF library repositories as vendor submodules
+## 2026-10-15 — Vendor import method corrected
 
-- Added the upstream Mozilla PDF.js repository at `site/vendor/pdf.js` as a Git submodule, pinned to `fcde2e1f9a960e9d234caea43746d6223cd054df`.
-- Added the upstream Hopding pdf-lib repository at `site/vendor/pdf-lib` as a Git submodule, pinned to `93dd36e85aa659a3bca09867d2d8fac172501fbe`.
-- Added root `.gitmodules` configuration and updated `site/vendor/README.md` with the usage policy: evaluate PDF.js first; consider pdf-lib only if required; remove the pdf-lib submodule if evaluation finds it unnecessary.
-- Both libraries are present for evaluation only. Neither is currently loaded or used by the Lux Omni application.
-- Upstream source repositories are referenced as submodules; their source was not copied into or modified by this project.
+- An initial attempt used Git submodules. That approach was superseded after the request was clarified.
+- The submodule entries and root `.gitmodules` file were removed; the final vendor directories are ordinary tracked files.
+- The upstream library source trees remain unmodified. Only the parent repository's vendor policy README and this build log are Lux Omni-authored documentation.
 
-## 2026-10-15 — Import full PDF library repositories
+## 2026-10-15 — Import and verify complete upstream repositories
 
-- Imported the complete tracked contents of Mozilla PDF.js into  from upstream commit .
-- Imported the complete tracked contents of Hopding pdf-lib into  from upstream commit .
-- Both directories are now ordinary tracked files, not Git submodules. Removed the temporary  configuration.
-- Copied upstream files as-is, including text, binary assets, fonts, test fixtures, documentation, and license files; excluded only each repository's internal  metadata.
-- Updated : PDF.js is the first choice; pdf-lib is optional; neither library is currently used by Lux Omni.
-- No Lux Omni application integration code was added.
+- Imported the exact tracked file tree from Mozilla PDF.js into `site/vendor/pdf.js/`, pinned to upstream commit `fcde2e1f9a960e9d234caea43746d6223cd054df`.
+- Imported the exact tracked file tree from Hopding pdf-lib into `site/vendor/pdf-lib/`, pinned to upstream commit `93dd36e85aa659a3bca09867d2d8fac172501fbe`.
+- Verified each vendored tree against its upstream Git tree: PDF.js has 2,597 tracked files and pdf-lib has 759 tracked files, with no missing paths, extra paths, mode differences, or blob SHA differences.
+- Preserved upstream source, documentation, license files, binary assets, fonts, and test fixtures. Omitted only the upstream repositories' internal `.git` metadata.
+- Updated `site/vendor/README.md` to state the intended order: evaluate PDF.js first, use pdf-lib only if a required feature needs it, and remove pdf-lib if it is unnecessary.
+- Neither library is currently used by the Lux Omni application. No runtime imports, workers, or integration code were added.
+- Final verified vendor source tree is present in commit `9738d7be828c8fb3e29a9612743210de3a8df1b0`.
 
-## 2026-10-15 — Verify and complete upstream library import
-
-- Re-synchronized both vendor directories from the pinned upstream commits to include every tracked upstream file, including files ignored by the parent repository's default Git rules.
-- PDF.js source commit: `fcde2e1f9a960e9d234caea43746d6223cd054df`.
-- pdf-lib source commit: `93dd36e85aa659a3bca09867d2d8fac172501fbe`.
-- The import step verifies copied file counts against each source Git tree before committing.
-- Updated `site/vendor/README.md` using a literal heredoc to preserve all Markdown and commit IDs.
-- Both libraries remain unused by application code.
