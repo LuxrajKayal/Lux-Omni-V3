@@ -152,3 +152,11 @@
 - `site/js/utils/Logger.js`
 - `site/js/utils/Helpers.js`
 - `site/js/utils/FeatureFlags.js`
+
+## 2026-10-15 — Add PDF library repositories as vendor submodules
+
+- Added the upstream Mozilla PDF.js repository at `site/vendor/pdf.js` as a Git submodule, pinned to `fcde2e1f9a960e9d234caea43746d6223cd054df`.
+- Added the upstream Hopding pdf-lib repository at `site/vendor/pdf-lib` as a Git submodule, pinned to `93dd36e85aa659a3bca09867d2d8fac172501fbe`.
+- Added root `.gitmodules` configuration and updated `site/vendor/README.md` with the usage policy: evaluate PDF.js first; consider pdf-lib only if required; remove the pdf-lib submodule if evaluation finds it unnecessary.
+- Both libraries are present for evaluation only. Neither is currently loaded or used by the Lux Omni application.
+- Upstream source repositories are referenced as submodules; their source was not copied into or modified by this project.
