@@ -160,3 +160,12 @@
 - Added root `.gitmodules` configuration and updated `site/vendor/README.md` with the usage policy: evaluate PDF.js first; consider pdf-lib only if required; remove the pdf-lib submodule if evaluation finds it unnecessary.
 - Both libraries are present for evaluation only. Neither is currently loaded or used by the Lux Omni application.
 - Upstream source repositories are referenced as submodules; their source was not copied into or modified by this project.
+
+## 2026-10-15 — Import full PDF library repositories
+
+- Imported the complete tracked contents of Mozilla PDF.js into  from upstream commit .
+- Imported the complete tracked contents of Hopding pdf-lib into  from upstream commit .
+- Both directories are now ordinary tracked files, not Git submodules. Removed the temporary  configuration.
+- Copied upstream files as-is, including text, binary assets, fonts, test fixtures, documentation, and license files; excluded only each repository's internal  metadata.
+- Updated : PDF.js is the first choice; pdf-lib is optional; neither library is currently used by Lux Omni.
+- No Lux Omni application integration code was added.

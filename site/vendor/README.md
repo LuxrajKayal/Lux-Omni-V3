@@ -2,39 +2,21 @@
 
 ## Current status
 
-**Neither library is currently used by Lux Omni.** These repositories are included for evaluation only. No application imports, runtime loading, PDF viewing, PDF editing, or worker configuration has been implemented.
+Neither library is currently used by Lux Omni. The repositories are vendored for evaluation only. No application imports, runtime loading, PDF viewing, PDF editing, or worker configuration has been implemented.
 
 ## Order of consideration
 
-1. **PDF.js (Mozilla) — primary choice.** Evaluate it first for PDF loading, parsing, rendering, and viewing inside Lux Omni.
-2. **pdf-lib (Hopding) — optional secondary library.** Consider it only if a required PDF creation or modification feature cannot be provided appropriately by the chosen PDF.js workflow.
-3. **Remove what is not needed.** If evaluation shows pdf-lib is unnecessary, remove the `site/vendor/pdf-lib` submodule entry and its matching section from `.gitmodules`. Do not delete source files from either upstream project; remove the submodule link from this project instead.
+1. **PDF.js (Mozilla) — primary choice.** Evaluate first for PDF loading, parsing, rendering, and viewing inside Lux Omni.
+2. **pdf-lib (Hopding) — optional secondary library.** Consider only if a required PDF creation or modification feature cannot be provided appropriately by the chosen PDF.js workflow.
+3. **Remove what is not needed.** If pdf-lib proves unnecessary, delete  from Lux Omni. Its upstream repository remains available at the link below.
 
-## Repositories
+## Imported upstream snapshots
 
-- PDF.js: https://github.com/mozilla/pdf.js.git
-  - Pinned upstream commit: `fcde2e1f9a960e9d234caea43746d6223cd054df`
-  - License: Apache-2.0
-- pdf-lib: https://github.com/Hopding/pdf-lib.git
-  - Pinned upstream commit: `93dd36e85aa659a3bca09867d2d8fac172501fbe`
-  - License: MIT
+- PDF.js: https://github.com/mozilla/pdf.js — commit  — Apache-2.0
+- pdf-lib: https://github.com/Hopding/pdf-lib — commit  — MIT
 
-The library directories are Git submodules so their upstream source stays separate and unmodified. The parent Lux Omni repository records each pinned upstream commit.
-
-## Checkout
-
-Clone this project with submodules:
-
-```sh
-git clone --recurse-submodules https://github.com/LuxrajKayal/Lux-Omni-V3.git
-```
-
-For an existing clone:
-
-```sh
-git submodule update --init --recursive
-```
+The library source files and upstream documentation are copied from the pinned upstream commits without application-specific edits. Git metadata is not included. Root library README and license files are preserved inside each library directory.
 
 ## Integration reminder
 
-Having the source repositories here does **not** make the libraries active in the website. Before use, select and configure suitable browser-ready distribution/build files and, for PDF.js, its matching worker. Do not wire either library into the app until implementation is explicitly planned and tested.
+Having source code in this folder does **not** make either library active in the website. Select and configure suitable browser-ready build files and, for PDF.js, its matching worker before use. Do not wire either library into the app until implementation is explicitly planned and tested.
