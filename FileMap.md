@@ -1,16 +1,23 @@
+# Lux Omni V3 — File Map
+
+This map details Lux Omni's application and support files. The two vendored PDF libraries are summarized at their top level; each folder contains the complete pinned upstream file tree, excluding only upstream Git metadata. Browse the vendor directories for exhaustive internal paths. As documented in `site/vendor/README.md`, neither library is currently integrated into Lux Omni's runtime.
+
 Lux-Omni-V3/
 ├── .github/
 │   └── workflows/
 │       └── pages.yml
-├── docs/
-│   ├── ARCHITECTURE.md
-│   ├── PROVIDER_GUIDE.md
-│   ├── CONTENT_ADAPTER_GUIDE.md
-│   └── MIGRATION_LOG.md
+├── FileMap.md
+├── README.md
+├── clipboard.html
 ├── dev-tools/
 │   ├── README.md
 │   └── remove-comments.js
-├── clipboard.html
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── BUILD_LOG.md
+│   ├── CONTENT_ADAPTER_GUIDE.md
+│   ├── MIGRATION_LOG.md
+│   └── PROVIDER_GUIDE.md
 ├── privacy.html
 └── site/
     ├── index.html
@@ -76,7 +83,7 @@ Lux-Omni-V3/
     │   │   └── dark.css
     │   └── responsive/
     │       └── application-responsive.css
-    └── js/
+    ├── js/
         ├── main.js
         ├── core/
         │   ├── EventBus.js
@@ -191,3 +198,64 @@ Lux-Omni-V3/
             ├── Logger.js
             ├── Helpers.js
             └── FeatureFlags.js
+    └── vendor/
+        ├── README.md
+        ├── pdf-lib/
+        │   ├── .circleci/
+        │   ├── .github/
+        │   ├── .vscode/
+        │   ├── apps/
+        │   ├── assets/
+        │   ├── docs/
+        │   ├── scratchpad/
+        │   ├── src/
+        │   ├── tests/
+        │   ├── .gitattributes
+        │   ├── .gitignore
+        │   ├── .prettierrc.json
+        │   ├── LICENSE.md
+        │   ├── README.md
+        │   ├── jest.json
+        │   ├── package.json
+        │   ├── rollup.config.js
+        │   ├── tsconfig.json
+        │   ├── tslint.json
+        │   └── yarn.lock
+        └── pdf.js/
+            ├── .github/
+            ├── docs/
+            ├── examples/
+            ├── extensions/
+            ├── external/
+            ├── l10n/
+            ├── src/
+            ├── test/
+            ├── web/
+            ├── .editorconfig
+            ├── .git-blame-ignore-revs
+            ├── .gitattributes
+            ├── .gitignore
+            ├── .mailmap
+            ├── .mcp.json
+            ├── .prettierignore
+            ├── .prettierrc
+            ├── .puppeteerrc.json
+            ├── .stylelintignore
+            ├── .stylelintrc
+            ├── .svglintrc.js
+            ├── AGENTS.md
+            ├── AUTHORS
+            ├── CODE_OF_CONDUCT.md
+            ├── EXPORT
+            ├── LICENSE
+            ├── README.md
+            ├── codecov.yml
+            ├── eslint.config.mjs
+            ├── gulpfile.mjs
+            ├── jsdoc.json
+            ├── package-lock.json
+            ├── package.json
+            ├── pdfjs.config
+            ├── stylelint-mozcentral.json
+            └── tsconfig.json
+
