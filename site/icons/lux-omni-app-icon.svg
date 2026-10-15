@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
+  <defs>
+    <!-- App Icon Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Bottom Layer: Foundation (Deep Indigo/Slate) -->
+    <linearGradient id="layer-bottom" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+
+    <!-- Middle Layer: Unified Ecosystem (Royal Blue to Indigo) -->
+    <linearGradient id="layer-middle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+
+    <!-- Top Layer "L" Wing: Lux Illumination (Cyan to Sky Blue) -->
+    <linearGradient id="layer-top-lux" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67E8F9" />
+      <stop offset="50%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <!-- Top Layer Split Module: Secondary Workspace -->
+    <linearGradient id="layer-top-mod" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BAE6FD" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+
+    <!-- Central Nexus Axis Glow -->
+    <linearGradient id="nexus-core" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="45%" stop-color="#22D3EE" />
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow for Layer Separation -->
+    <filter id="layer-shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#020617" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <!-- Squircle App Container -->
+  <rect width="256" height="256" rx="56" fill="url(#bg-grad)" />
+  <rect x="2" y="2" width="252" height="252" rx="54" fill="none" stroke="#1E293B" stroke-width="2" />
+
+  <!-- LAYER 1 (BOTTOM): Storage & Foundation Layer -->
+  <path fill="url(#layer-bottom)" fill-rule="evenodd" filter="url(#layer-shadow)"
+        d="M 128 116 L 212 164 L 128 212 L 44 164 Z 
+           M 128 148 L 156 164 L 128 180 L 100 164 Z" />
+
+  <!-- LAYER 2 (MIDDLE): Unified Ecosystem O-Ring -->
+  <path fill="url(#layer-middle)" fill-rule="evenodd" filter="url(#layer-shadow)"
+        d="M 128 80 L 212 128 L 128 176 L 44 128 Z 
+           M 128 112 L 156 128 L 128 144 L 100 128 Z" />
+
+  <!-- CENTRAL NEXUS AXIS: Vertical Pillar Binding the Layers -->
+  <g>
+    <!-- Left Shaded Facet of Pillar -->
+    <path fill="url(#nexus-core)" opacity="0.85"
+          d="M 114 72 L 128 80 L 128 168 L 114 160 Z" />
+    <!-- Right Illuminated Facet of Pillar -->
+    <path fill="url(#nexus-core)" opacity="0.55"
+          d="M 142 72 L 128 80 L 128 168 L 142 160 Z" />
+    <!-- Top Diamond Cap of Nexus Core -->
+    <path fill="#ECFEFF"
+          d="M 128 64 L 142 72 L 128 80 L 114 72 Z" />
+  </g>
+
+  <!-- LAYER 3 (TOP): Split-Screen "L + O" Workspace -->
+  <g filter="url(#layer-shadow)">
+    <!-- Primary "L" Structural Wing (Lux) -->
+    <path fill="url(#layer-top-lux)"
+          d="M 128 44 L 156 60 L 100 92 L 156 124 L 128 140 L 44 92 Z" />
+    <!-- Secondary Split-Screen Module (Completes the "O" Silhouette) -->
+    <path fill="url(#layer-top-mod)"
+          d="M 163 64 L 212 92 L 163 120 L 135 104 L 156 92 L 135 76 Z" />
+  </g>
+</svg>

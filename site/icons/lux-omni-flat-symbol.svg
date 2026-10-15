@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <!-- Bottom Layer Chevron -->
+  <path fill="#334155" d="M 32 54 L 8 40.3 L 13.6 37.1 L 32 47.6 L 50.4 37.1 L 56 40.3 Z" />
+  
+  <!-- Middle Layer Chevron -->
+  <path fill="#2563EB" d="M 32 44 L 8 30.3 L 13.6 27.1 L 32 37.6 L 50.4 27.1 L 56 30.3 Z" />
+
+  <!-- Top Layer: Primary "L" Workspace Plane -->
+  <path fill="#06B6D4" d="M 32 10 L 39.5 14.3 L 24.5 22.9 L 39.5 31.4 L 32 35.7 L 8 22 Z" />
+
+  <!-- Top Layer: Secondary Split Module (Completes the "O") -->
+  <path fill="#38BDF8" d="M 42.5 16 L 56 23.7 L 42.5 31.4 L 35 27.1 L 41 23.7 L 35 20.3 Z" />
+
+  <!-- Central Nexus Core Node -->
+  <path fill="#0EA5E9" d="M 32 19.5 L 36.5 22 L 32 24.5 L 27.5 22 Z" />
+</svg>
