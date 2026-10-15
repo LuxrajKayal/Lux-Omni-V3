@@ -25,15 +25,23 @@
 </head>
 
 <body>
-    <!-- Global header: application branding, Dropbox controls, theme, and Focus Mode. -->
+    <!-- At left Global header: Brand Logo, Brand Name, Brand Slogan.
+     At right connected app status, Focus Mode , sync button, and Account controls. -->
+
     <header class="lux-topbar">
         
-        <a
-  class="lux-topbar__brand"
-  href="./"
-  aria-label="Lux Omni home">
-        <!-- Display the application logo. -->
-  <img src="./icons/lux-pdf-viewer-icon.svg" alt="">
+        <a class="brand" href="./" aria-label="Lux Omni home">
+            <span class="brand-mark" aria-hidden="true">
+                <img 
+                    src="./icons/svg/lux-omni-app-icon.svg" 
+                    alt="Lux Omni"
+                    >
+            </span>
+
+            <span class="brand-copy">
+                <span class="brand-name">Lux Omni</span>
+                <span class="brand-slogan">One Ecosystem. Endless Possibilities.</span>    
+            </span>
         </a>
     </header>
 </body>
