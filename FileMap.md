@@ -22,9 +22,17 @@ Lux-Omni-V3/
 └── site/
     ├── index.html
     ├── icons/
-    │   ├── lux-pdf-viewer-icon.svg
-    │   ├── lux-pdf-viewer-icon-64.png
-    │   └── lux-pdf-viewer-icon-256.png
+    │   ├── README.md
+    │   ├── preview.html
+    │   ├── docs/
+    │   │   ├── 01-static-layered-nexus-logo-guide.md
+    │   │   └── 02-animated-layered-nexus-loader-guide.md
+    │   └── svg/
+    │       ├── lux-omni-app-icon.svg
+    │       ├── lux-omni-flat-symbol.svg
+    │       ├── lux-omni-loader.svg
+    │       ├── lux-omni-micro-icon.svg
+    │       └── lux-omni-micro-spinner.svg
     ├── css/
     │   ├── foundation/
     │   │   ├── tokens.css
