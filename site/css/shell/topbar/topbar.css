@@ -1,0 +1,10 @@
+
+
+.lux-topbar {
+    display: flex;
+    align-items: center;
+    min-height: 64px;
+    padding: 0 24px;
+    background: #98deff;
+    border-bottom: 1px solid #070707;
+}
