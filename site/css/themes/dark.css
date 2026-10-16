@@ -1,4 +1,4 @@
-:root, [data-theme="dark"] {
+[data-theme="dark"] {
   /* Rule: In dark mode, the topbar background uses the dark paint */
   --theme-topbar-bg: var(--lux-obsidian-canvas);
   

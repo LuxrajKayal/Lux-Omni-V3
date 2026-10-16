@@ -1,4 +1,4 @@
-:root,[data-theme="light"] {
+[data-theme="light"] {
   /* Rule: In light mode, the topbar background uses the light paint */
   --theme-topbar-bg: var(--lux-slate-50);
   
