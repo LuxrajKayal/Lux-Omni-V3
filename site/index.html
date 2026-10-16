@@ -1,48 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- This is the meta section -->
+    <!-- Document metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-    <!-- Here we will link the CSS file as per nested structure in
-     file map -->
+    <!-- Topbar stylesheet -->
     <link rel="stylesheet" href="./css/shell/topbar/topbar.css">
-
-
-    <!-- This will be the icon link -->
-
-
-
-     <!-- This will be the javascript entry point -->
-
-
-
 
     <title>Lux Omni</title>
 </head>
 
 <body>
-    <!-- At left Global header: Brand Logo, Brand Name, Brand Slogan.
-     At right connected app status, Focus Mode , sync button, and Account controls. -->
-
+    <!-- Left: brand identity. Right: application controls. -->
     <header class="lux-topbar">
-        
+
+        <!-- Brand logo, name and slogan -->
         <a class="brand" href="./" aria-label="Lux Omni home">
             <span class="brand-mark" aria-hidden="true">
-                <img 
-                    src="./icons/svg/lux-omni-app-icon.svg" 
-                    alt="Lux Omni"
-                    >
+                <img
+                    src="./icons/svg/lux-omni-app-icon.svg"
+                    alt=""
+                >
             </span>
 
             <span class="brand-copy">
                 <span class="brand-name">Lux Omni</span>
-                <span class="brand-slogan">One Ecosystem. Endless Possibilities.</span>    
+                <span class="brand-slogan">
+                    One Ecosystem. Endless Possibilities.
+                </span>
             </span>
         </a>
+
+        <!-- Right-side application controls -->
+        <div class="topbar-actions">
+
+            <!-- Connection status monitor and dropdown -->
+            <div class="topbar-connection-control">
+
+                <!-- Rotating service-status button -->
+                <button
+                    class="topbar-connection-button"
+                    id="connection-toggle"
+                    type="button"
+                    aria-label="Checking service connections. Open connection menu."
+                    aria-expanded="false"
+                    aria-controls="connection-menu"
+                    data-connection-state="checking"
+                >
+                    <!-- Generic indicator shown during initial checking -->
+                    <img
+                        class="topbar-active-service-icon"
+                        id="active-service-icon"
+                        src="./icons/svg/lux-omni-micro-spinner.svg"
+                        alt=""
+                    >
+
+                    <!-- Status of the currently displayed service -->
+                    <span
+                        class="topbar-active-status-dot"
+                        id="active-status-dot"
+                        aria-hidden="true"
+                    ></span>
+                </button>
+
+                <!-- Service menu, initially hidden -->
+                <section
+                    class="topbar-connection-menu"
+                    id="connection-menu"
+                    aria-labelledby="connection-heading"
+                    aria-describedby="connection-description"
+                    hidden
+                >
+                    <!-- Dropdown heading -->
+                    <div class="topbar-connection-header">
+                        <h2 id="connection-heading">
+                            Service Connections
+                        </h2>
+
+                        <p id="connection-description">
+                            View and manage each service independently.
+                        </p>
+                    </div>
+
+                    <!-- Individual service entries -->
+                    <ul class="topbar-service-list">
+
+                        <!-- Google Drive -->
+                        <li
+                            class="topbar-service-entry"
+                            data-provider="google-drive"
+                            data-connection-state="checking"
+                        >
+                            <img
+                                class="topbar-service-icon"
+                                src="./icons/providers/google-drive.svg"
+                                alt=""
+                            >
+
+                            <span
+                                class="topbar-service-status-dot"
+                                aria-hidden="true"
+                            ></span>
+
+                            <span class="topbar-service-name">
+                                Google Drive
+                            </span>
+
+                            <span class="topbar-service-status">
+                                Checking...
+                            </span>
+
+                            <button
+                                class="topbar-service-action"
+                                type="button"
+                                data-provider="google-drive"
+                                disabled
+                                aria-label="Checking Google Drive connection"
+                            >
+                                Checking...
+                            </button>
+                        </li>
+
+                        <!-- Dropbox -->
+                        <li
+                            class="topbar-service-entry"
+                            data-provider="dropbox"
+                            data-connection-state="checking"
+                        >
+                            <img
+                                class="topbar-service-icon"
+                                src="./icons/providers/dropbox.svg"
+                                alt=""
+                            >
+
+                            <span
+                                class="topbar-service-status-dot"
+                                aria-hidden="true"
+                            ></span>
+
+                            <span class="topbar-service-name">
+                                Dropbox
+                            </span>
+
+                            <span class="topbar-service-status">
+                                Checking...
+                            </span>
+
+                            <button
+                                class="topbar-service-action"
+                                type="button"
+                                data-provider="dropbox"
+                                disabled
+                                aria-label="Checking Dropbox connection"
+                            >
+                                Checking...
+                            </button>
+                        </li>
+
+                        <!-- OneDrive -->
+                        <li
+                            class="topbar-service-entry"
+                            data-provider="onedrive"
+                            data-connection-state="checking"
+                        >
+                            <img
+                                class="topbar-service-icon"
+                                src="./icons/providers/onedrive.svg"
+                                alt=""
+                            >
+
+                            <span
+                                class="topbar-service-status-dot"
+                                aria-hidden="true"
+                            ></span>
+
+                            <span class="topbar-service-name">
+                                OneDrive
+                            </span>
+
+                            <span class="topbar-service-status">
+                                Checking...
+                            </span>
+
+                            <button
+                                class="topbar-service-action"
+                                type="button"
+                                data-provider="onedrive"
+                                disabled
+                                aria-label="Checking OneDrive connection"
+                            >
+                                Checking...
+                            </button>
+                        </li>
+
+                    </ul>
+
+                    <!-- Feedback for future connection operations -->
+                    <p
+                        class="topbar-connection-feedback"
+                        id="connection-feedback"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </section>
+            </div>
+
+            <!-- Future controls: Focus Mode, Sync and Account -->
+
+        </div>
     </header>
 </body>
 </html>
