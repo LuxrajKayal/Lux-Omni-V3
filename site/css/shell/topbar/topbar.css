@@ -31,5 +31,9 @@ devoloper to manually remove the comments if they ask you explicitly.
 
    /* Predictable sizing */
     box-sizing: border-box;
+    /*  Background Color */
+    background-color: var(--theme-topbar-bg);
+   color: var(--theme-topbar-text);
+  
   
 }

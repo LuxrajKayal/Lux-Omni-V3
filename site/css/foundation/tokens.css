@@ -1,0 +1,6 @@
+:root {
+    /* 1. Core Brand & Layered Nexus Logo Tokens */
+    --lux-obsidian-canvas: #0F172A;  /* Dark-mode application surface */
+    /* 3. Deep Slate & Obsidian Primitives (Your Grayscale) */
+    --lux-slate-50: #F8FAFC;
+}
