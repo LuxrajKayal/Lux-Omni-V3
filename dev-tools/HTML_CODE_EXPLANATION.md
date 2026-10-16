@@ -3,7 +3,7 @@
 **Document:** `dev-tools/HTML_CODE_EXPLANATION.md`  
 **Code covered:** `site/index.html`  
 **Purpose:** Learning reference for the current topbar HTML  
-**Status:** HTML structure only; CSS styling and JavaScript behaviour are not implemented here.
+**Status:** HTML structure with basic brand-link styling; Connections dropdown styling and JavaScript behaviour are not implemented here.
 
 > **Maintenance rule:** Whenever `site/index.html` changes in a future push, update the complete HTML snapshot and the relevant explanations in this document. This guide is intended to match the current version of the page, not an older example.
 
@@ -43,7 +43,7 @@ The code below is the complete page with a documentation pointer added at the to
     <header class="lux-topbar">
 
         <!-- Brand logo, name and slogan -->
-        <a class="brand" href="./" aria-label="Lux Omni home">
+        <a class="brand" href="https://luxrajkayal.github.io/Lux-Omni-V3/" aria-label="Lux Omni home">
             <span class="brand-mark" aria-hidden="true">
                 <img
                     src="./icons/svg/lux-omni-app-icon.svg"
@@ -242,6 +242,15 @@ The code below is the complete page with a documentation pointer added at the to
 </html>
 ~~~
 
+
+## Brand link and home navigation
+
+The brand logo, product name, and slogan are all children of the same `<a class="brand">` element. This makes the complete brand area one clickable link, rather than making only the image clickable.
+
+The link uses `https://luxrajkayal.github.io/Lux-Omni-V3/`, the published Lux Omni V3 project homepage. Using the full URL avoids relying on the current page's relative path. When testing locally, this link intentionally navigates to the published site.
+
+In `site/css/shell/topbar/topbar.css`, the `.brand` rule groups the logo and copy with flexbox, removes the default underline, and keeps the link colour inherited. The `.brand-mark` and `.brand-mark img` rules set the logo size to 42 × 42 pixels while keeping the SVG contained. The `.brand-copy`, `.brand-name`, and `.brand-slogan` rules arrange and size the text. The `.brand:focus-visible` rule adds a visible keyboard-focus outline.
+
 ## 3. HTML elements: what they do and when to use them
 
 | Element | What it does | Why it is used here |
@@ -281,7 +290,7 @@ An **attribute** is information written inside an opening HTML tag. For example,
 | `name="viewport"` | Identifies the viewport metadata setting. | Lets the next attribute configure the page's viewport. |
 | `content="width=device-width, initial-scale=1.0"` | Sets the viewport width to the device width and the initial zoom scale to 1. | Helps the page render appropriately on mobile screens. |
 | `rel="stylesheet"` | Says the linked resource is a stylesheet. | Tells the browser that the linked file contains CSS. |
-| `href="./"` | Supplies the destination URL for a link. | Makes the brand link point to the current directory's default page. |
+| `href="https://luxrajkayal.github.io/Lux-Omni-V3/"` | Supplies the destination URL for a link. | Sends the brand link to the published Lux Omni V3 homepage regardless of the current page path. |
 | `href="./css/shell/topbar/topbar.css"` | Supplies the location of the CSS file. | Loads the topbar styles. |
 | `class="..."` | Assigns one or more CSS class names. | Lets CSS select and style elements. Class names can also help organize markup. |
 | `id="..."` | Assigns an identifier that should be unique within the HTML document. | Names specific elements for accessibility references and future JavaScript. |
@@ -328,7 +337,7 @@ These are initial HTML values only. No real checking or rotation is happening ye
 
 The following work is intentionally outside the current HTML-only stage:
 
-1. **CSS:** Arrange the brand on the left and controls on the right; size the icons; style the dropdown; show green, red, or neutral status dots; preserve the hidden state.
+1. **CSS:** The brand link already uses flex layout and basic logo/name/slogan styling. Remaining CSS work includes refining the full header layout, styling the dropdown, sizing provider icons, showing green/red/neutral status dots, and preserving the hidden state.
 2. **JavaScript:** Open and close the dropdown, keep `aria-expanded` in sync, check service status, update the icon and dots, rotate the topbar indicator every 10 seconds, and choose the correct Connect/Disconnect action.
 3. **Provider integration:** Verify the status of each supported provider and carry out connection or disconnection requests.
 4. **Error handling:** Show a useful message if a status check fails or a connection action cannot complete.
