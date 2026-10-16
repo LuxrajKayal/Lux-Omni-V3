@@ -6,9 +6,30 @@ devoloper to manually remove the comments if they ask you explicitly.
 */
 
 /* =========================================
-   1.THE TOPBAR 
+   1.MOTHER TOPBAR 
    ========================================= */
 
 .lux-topbar {
+   /*POSITION*/
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 10;
+   
+   /* Size */
+    width: 100%;
+    min-height: 64px;
+
+    /* Inner spacing */
+    padding: 12px 28px;
+
+    /* Layout */
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   /* Predictable sizing */
+    box-sizing: border-box;
   
 }
