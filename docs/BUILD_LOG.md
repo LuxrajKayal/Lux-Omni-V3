@@ -169,3 +169,21 @@
 - Neither library is currently used by the Lux Omni application. No runtime imports, workers, or integration code were added.
 - Final verified vendor source tree is present in commit `9738d7be828c8fb3e29a9612743210de3a8df1b0`.
 
+
+## 2026-10-16 to 2026-10-17 — Design tokens, themes, and topbar typography
+
+- Expanded `site/css/foundation/tokens.css` with additional Lux brand color primitives, grayscale values, reusable gradients, shared font-family tokens, and motion values. Recorded in commit `ddc2045`.
+- Added `site/css/foundation/typography.css` to apply the shared sans-serif font to page text and common form controls, and the monospace font to code-related elements. Added the stylesheet to `FileMap.md`. Commits: `608fbad`, `e25e947`.
+- Added reusable brand-name and slogan typography tokens in `typography.css`. Commit: `777c11c`.
+- Added `--theme-topbar-muted` mappings in `site/css/themes/light.css` and `site/css/themes/dark.css` so the slogan can use a theme-specific muted color. Commit: `0086dc7`.
+- Added brand layout and text styles in `site/css/shell/topbar/topbar.css`, including the logo container, brand-copy stack, brand-name typography, slogan styling, and `color: inherit` on `.brand`. Commits: `ecb86ac`, `efd96dc`, `5db6b8e`, `89e52cb`.
+- Updated the page title and visible brand name to `Lux Omni Workspace` in `site/index.html`. Commit: `f585793`.
+- The root HTML element declares `data-theme="dark"`. The theme stylesheets define topbar background, main text, and muted text variables for the active theme.
+- Verification scope: the repository source files and related commits were inspected. This entry does not claim a browser visual test was performed. A working theme-toggle button, theme persistence, responsive behavior, and full topbar interactions remain to be implemented and tested.
+
+## 2026-10-17 — Chatbot workflow instructions
+
+- Added root `instruction-for-chatbots.md` to document approval-first repository work, the required onboarding process, no-hallucination expectations, project context, CSS/token conventions, and collaboration preferences. Commits: `7420ee1`, `268f7a7`, `ddfbcda`.
+- Added `instruction-for-chatbots.md` to the root of `FileMap.md`. Commit: `76a2117`.
+- Added an append-only documentation rule to the chatbot instructions: future build-log updates must append new dated entries without changing, deleting, reordering, or silently correcting prior history.
+- This is a new entry appended after the existing build log. No earlier build-log content was edited or removed.

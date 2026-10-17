@@ -24,6 +24,16 @@ The developer is learning to build Lux Omni V3 and wants to make changes persona
 
 **The developer's ownership and learning process take priority over speed or unsolicited improvements.**
 
+### Append-Only Documentation Rules
+
+- `docs/BUILD_LOG.md` is an **append-only historical record**. Every update must add a new dated entry at the end of the file. Never remove, rewrite, reorder, paraphrase, or silently correct existing entries.
+- Before updating the build log, read the current complete file from the repository. Preserve all existing content verbatim and append new text only. Never reconstruct the file from an old copy, partial excerpt, or memory.
+- If an earlier entry contains a mistake, do not edit it in place. Tell the developer and propose an explicitly labeled correction/addendum at the end; obtain permission before adding that correction.
+- Record only changes verified in the repository. State the relevant file paths and commit IDs when known, and distinguish implemented work from planned work and from work that has not been tested.
+- Apply the same append-only principle to other historical records when their purpose is to preserve a timeline, unless the developer explicitly authorizes a different operation.
+- Before a commit that changes this instruction file, refresh the commit-history snapshot below with all commits already present on the branch. Never invent a commit ID or pretend a not-yet-created commit is already in history; record the new commit in the snapshot at the next authorized update.
+
+
 ## 2. Required Onboarding Process for a New Chatbot
 
 Before proposing or making any project change, follow these steps in order.
@@ -146,10 +156,14 @@ These are practical reminders: **do only what was requested, ask before expandin
 
 ### Commit messages recorded in the snapshot
 
-The following is the 54-commit history returned by GitHub on 2026-10-17, shown **newest to oldest**. It is a reference snapshot; check the live Git history before every task. Your task is to update below data before each commit.
+The following is the 58-commit history returned by GitHub on 2026-10-17, shown **newest to oldest** and current through parent revision `76a2117cfd905e70999725bc3e5f1078dfa9ab4d`. It is a reference snapshot; check the live Git history before every task. Your task is to update below data before each commit.
 
 | Date (UTC) | Short SHA | Commit message |
 |---|---|---|
+| 2026-10-17 | `76a2117` | docs: add chatbot instructions to file map |
+| 2026-10-17 | `268f7a7` | Fix typos in instruction-for-chatbots.md |
+| 2026-10-17 | `ddfbcda` | docs: correct commit history snapshot in chatbot instructions |
+| 2026-10-17 | `7420ee1` | docs: add chatbot repository working instructions |
 | 2026-10-17 | `89e52cb` | style: add inherit color property to brand class for consistency. This prevents the browser's default link color from overriding the topbar's intended text color. |
 | 2026-10-17 | `5db6b8e` | style: fix typo in white-space property and add brand slogan styles |
 | 2026-10-17 | `f585793` | style: update title and brand name to include 'Workspace' for consistency |
