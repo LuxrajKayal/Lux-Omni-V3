@@ -19,3 +19,14 @@ kbd,
 samp {
   font-family: var(--lux-font-mono);
 }
+
+/* Brand typography tokens */
+:root {
+    --lux-type-brand-name-size: 19px;
+    --lux-type-brand-name-weight: 700;
+    --lux-type-brand-name-line-height: 1.2;
+    --lux-type-brand-name-spacing: -0.035em;
+
+    --lux-type-brand-slogan-size: 11px;
+    --lux-type-brand-slogan-line-height: 1.25;
+}
