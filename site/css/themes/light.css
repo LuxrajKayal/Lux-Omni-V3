@@ -4,4 +4,6 @@
   
   /* Rule: In light mode, the topbar text uses the dark paint */
   --theme-topbar-text: var(--lux-obsidian-canvas);
+ /* Rule: In light mode, the topbar muted text uses the medium paint */
+  --theme-topbar-muted: var(--lux-slate-700);
 }

@@ -4,4 +4,6 @@
   
   /* Rule: In dark mode, the topbar text uses the light paint */
   --theme-topbar-text: var(--lux-slate-50);
+/* Rule: In dark mode, the topbar muted text uses the medium paint */
+  --theme-topbar-muted: var(--lux-slate-400);
 }
