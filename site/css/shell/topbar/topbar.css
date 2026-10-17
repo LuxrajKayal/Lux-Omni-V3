@@ -80,5 +80,11 @@ devoloper to manually remove the comments if they ask you explicitly.
    line-height: var(--lux-type-brand-name-line-height);
    letter-spacing: var(--lux-type-brand-name-spacing);
    text-overflow: ellipsis;
-   whiote-space: nowrap;
+   white-space: nowrap;
+}
+
+.brand-slogan {
+    color: var(--theme-topbar-muted);
+    font-size: var(--lux-type-brand-slogan-size);
+    line-height: var(--lux-type-brand-slogan-line-height);
 }
