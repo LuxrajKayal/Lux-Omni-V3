@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Lux Omni V3 — Foundation Typography
+   File: site/css/foundation/typography.css
+   ========================================================================== */
+
+/* Apply the shared Lux sans-serif font to the main page and form controls. */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--lux-font-sans);
+}
+
+/* Use the shared monospace font for code-related elements. */
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--lux-font-mono);
+}
