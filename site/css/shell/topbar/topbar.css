@@ -45,6 +45,7 @@ devoloper to manually remove the comments if they ask you explicitly.
    align-items: center;
    gap: 12px;
    text-decoration: none;
+   color: inherit;
 
 }
 
