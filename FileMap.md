@@ -36,6 +36,7 @@ Lux-Omni-V3/
     ├── css/
     │   ├── foundation/
     │   │   ├── tokens.css
+    │   │   ├── typography.css
     │   │   ├── reset.css
     │   │   └── document.css
     │   ├── shell/
