@@ -1,6 +1,52 @@
+/* ==========================================================================
+   Lux Omni V3 — Foundation Design Tokens
+   File: site/css/foundation/tokens.css
+   ========================================================================== */
+
 :root {
-    /* 1. Core Brand & Layered Nexus Logo Tokens */
-    --lux-obsidian-canvas: #0F172A;  /* Dark-mode application surface */
-    /* 3. Deep Slate & Obsidian Primitives (Your Grayscale) */
-    --lux-slate-50: #F8FAFC;
+  /* 1. Core Brand & Layered Nexus Logo Tokens */
+  --lux-cyan-primary: #06B6D4;     /* cyan-500: Active "L" workspace plane & clarity accent */
+  --lux-sky-secondary: #38BDF8;    /* sky-400: Split-screen companion module */
+  --lux-cobalt-core: #2563EB;      /* blue-600: Middle unified ecosystem layer */
+  --lux-slate-foundation: #334155; /* slate-700: Bottom local/cloud storage layer */
+  --lux-obsidian-canvas: #0F172A;  /* slate-900: Dark-mode application surface */
+
+  /* 2. Extended Illumination & SVG Gradient Stops */
+  --lux-white-pure: #FFFFFF;       /* Top stop of nexus-core gradient */
+  --lux-ice-cap: #ECFEFF;          /* Top diamond cap of central Nexus core */
+  --lux-sky-light: #BAE6FD;        /* Top stop of secondary split-screen module (layer-top-mod) */
+  --lux-cyan-bright: #67E8F9;      /* Top stop of primary "L" wing (layer-top-lux) & badge text */
+  --lux-cyan-radiant: #22D3EE;     /* Middle stop of central nexus-core pillar */
+  --lux-blue-node: #0EA5E9;        /* Central Nexus core diamond in 64x64 flat symbol */
+  --lux-cerulean-deep: #0284C7;    /* Bottom stop of primary "L" wing (layer-top-lux) */
+  --lux-blue-royal: #3B82F6;       /* Top stop of middle ecosystem layer (layer-middle) */
+  --lux-indigo-deep: #1D4ED8;      /* Bottom stop of middle ecosystem layer & nexus-core base */
+
+  /* 3. Deep Slate & Obsidian Primitives */
+  --lux-slate-50: #F8FAFC;
+  --lux-slate-400: #94A3B8;
+  --lux-slate-700: #334155;
+  --lux-slate-800: #1E293B;
+  --lux-slate-900: #0F172A;
+  --lux-gray-900: #111827;
+  --lux-obsidian-stage: #0B0F19;
+  --lux-obsidian-bg: #090D16;
+  --lux-abyss: #020617;
+
+  /* 4. Reusable Brand Gradients */
+  --lux-grad-app-bg: linear-gradient(135deg, #0F172A 0%, #020617 100%);
+  --lux-grad-layer-bottom: linear-gradient(135deg, #334155 0%, #1E293B 100%);
+  --lux-grad-layer-middle: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+  --lux-grad-layer-top-lux: linear-gradient(135deg, #67E8F9 0%, #06B6D4 50%, #0284C7 100%);
+  --lux-grad-layer-top-mod: linear-gradient(135deg, #BAE6FD 0%, #38BDF8 100%);
+
+  /* 5. Typography Tokens */
+  --lux-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+  --lux-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* 6. Harmonic Loader & Motion Tokens */
+  --lux-speed: 2.4s;
+  --lux-ease: cubic-bezier(0.65, 0, 0.35, 1);
+  --lux-micro-speed: 1.6s;
+  --lux-micro-ease: cubic-bezier(0.45, 0, 0.55, 1);
 }
