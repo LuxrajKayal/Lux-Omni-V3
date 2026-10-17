@@ -8,6 +8,7 @@ Lux-Omni-V3/
 │       └── pages.yml
 ├── FileMap.md
 ├── README.md
+├── instruction-for-chatbots.md
 ├── clipboard.html
 ├── dev-tools/
 │   ├── README.md
