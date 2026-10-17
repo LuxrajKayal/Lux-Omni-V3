@@ -16,6 +16,7 @@ Lux-Omni-V3/
 ├── docs/
 │   ├── ARCHITECTURE.md
 │   ├── BUILD_LOG.md
+│   ├── PROJECT_STATUS.md
 │   ├── CONTENT_ADAPTER_GUIDE.md
 │   ├── MIGRATION_LOG.md
 │   └── PROVIDER_GUIDE.md
