@@ -76,7 +76,7 @@ Before proposing or making any project change, follow these steps in order.
 
 ## 4. Project Context and Current Architecture
 
-Lux Omni V3 is being developed as a modular, multi-content workspace. The repository's file map and scaffolding indicate intended areas such as:
+Lux Omni Workspace V3 is being developed as a modular, multi-content workspace. The repository's file map and scaffolding indicate intended areas such as:
 
 - Application shell: topbar, sidebar, workspace, viewports, minimized dock, replacement dialog.
 - Content features: PDF, Markdown, images, YouTube, clipboard, snipping/capture tools, and temporary logs.
@@ -146,7 +146,7 @@ These are practical reminders: **do only what was requested, ask before expandin
 
 ### Commit messages recorded in the snapshot
 
-The following is the 54-commit history returned by GitHub on 2026-10-17, shown **newest to oldest**. It is a reference snapshot; check the live Git history before every task.
+The following is the 54-commit history returned by GitHub on 2026-10-17, shown **newest to oldest**. It is a reference snapshot; check the live Git history before every task. Your task is to update below data before each commit.
 
 | Date (UTC) | Short SHA | Commit message |
 |---|---|---|
