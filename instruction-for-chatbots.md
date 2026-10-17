@@ -146,66 +146,67 @@ These are practical reminders: **do only what was requested, ask before expandin
 
 ### Commit messages recorded in the snapshot
 
+The following is the 54-commit history returned by GitHub on 2026-10-17, shown **newest to oldest**. It is a reference snapshot; check the live Git history before every task.
+
 | Date (UTC) | Short SHA | Commit message |
 |---|---|---|
-| 2026-10-14 | `f2fc93c` | Filemap created. |
-| 2026-10-14 | `a11379e` | Files added |
-| 2026-10-14 | `4c02053` | Add initial HTML structure and create styles.css file |
-| 2026-10-14 | `bdbdc23` | Create 107 empty file-map placeholders and update build log |
-| 2026-10-14 | `d5cb480` | Revert file-map scaffolding changes |
-| 2026-10-14 | `8dce60f` | File map updated to include new features and improvements. |
-| 2026-10-14 | `7640401` | Remove unused styles.css file |
-| 2026-10-14 | `aecfba1` | Create 143 empty placeholders from updated FileMap |
-| 2026-10-14 | `22933d1` | Add README.md for third-party dependencies documentation |
-| 2026-10-14 | `9de3dc7` | Add PDF.js and pdf-lib as unmodified vendor submodules |
-| 2026-10-14 | `b641e59` | Add temporary one-time vendor import workflow [run-vendor-import] |
-| 2026-10-14 | `a8d2a1d` | Import full PDF.js and pdf-lib source into vendor |
-| 2026-10-14 | `cb7c234` | Add temporary exact vendor verification workflow [run-vendor-verify] |
-| 2026-10-14 | `9738d7b` | Include every upstream-tracked PDF library file |
-| 2026-10-14 | `50171c8` | Correct build log and record verified full vendor import |
-| 2026-10-14 | `fd5361e` | Enhance HTML structure with additional comments for clarity |
-| 2026-10-14 | `fd97381` | Add PDF workflow flowchart and engineering block diagram |
-| 2026-10-14 | `3443b45` | Revert PDF diagrams added without approval |
-| 2026-10-15 | `5d36612` | Add Lux PDF viewer icon SVG and update index.html to include it |
-| 2026-10-15 | `37c9089` | Update FileMap with current repository structure |
-| 2026-10-15 | `8773e38` | Configure GitHub Actions deployment for Pages |
-| 2026-10-15 | `e9df66d` | Refactor Lux PDF Viewer Icon SVG structure |
-| 2026-10-15 | `af21c21` | Add Lux topbar CSS and new Lux Omni icon SVG |
-| 2026-10-15 | `993d180` | Add new SVG icons for Lux Omni application and loader |
-| 2026-10-15 | `cd8b8b4` | Add new SVG icons for Lux Omni application |
-| 2026-10-15 | `0a20c05` | docs: update V3 file map |
-| 2026-10-15 | `b56a708` | revert: restore original FileMap.md |
-| 2026-10-15 | `27a4c17` | docs: correct icons section in file map |
-| 2026-10-15 | `15467e8` | docs: update global header structure and branding details in index.html Svg directory fix |
-| 2026-10-15 | `aecfba1` | Create 143 empty placeholders from updated FileMap |
-| 2026-10-15 | `d5cb480` | Revert file-map scaffolding changes |
-| 2026-10-16 | `d0dc6ea` | docs: enhance index.html with detailed comments and structure for topbar functionality |
-| 2026-10-16 | `3085f66` | docs: explain current topbar HTML structure |
-| 2026-10-16 | `ba1cec7` | docs: link HTML walkthrough from index |
-| 2026-10-16 | `baf9a0b` | docs: fix markdown formatting in HTML guide |
-| 2026-10-16 | `d1754a8` | fix: point brand link to V3 homepage |
-| 2026-10-16 | `0252d46` | style: group brand logo and text as home link |
-| 2026-10-16 | `56b2261` | docs: sync HTML guide with brand home link |
-| 2026-10-16 | `3cd38ad` | style: remove unused topbar CSS styles I will write myself , Chatgpt written it while I asked to fix one link |
-| 2026-10-16 | `5df9cb5` | style: add initial topbar CSS structure with visual nesting comments |
-| 2026-10-16 | `728a1f6` | style: refine comments for visual nesting clarity in topbar CSS |
-| 2026-10-16 | `e590397` | style: update topbar section header and enhance CSS structure with detailed comments |
-| 2026-10-16 | `e57e677` | style: add theme variables for topbar background and text colors in dark and light modes |
-| 2026-10-16 | `ac9bc17` | style: reorder topbar stylesheet links for improved organization |
-| 2026-10-16 | `0535777` | style: update light theme CSS to include root selector for topbar background |
-| 2026-10-16 | `2462619` | style: update dark and light theme CSS to remove root selector for topbar background |
-| 2026-10-16 | `ecb86ac` | style: add brand identity styles to topbar CSS for improved layout and design |
-| 2026-10-17 | `ddc2045` | style: enhance design tokens with additional gradients, typography, and motion variables |
-| 2026-10-17 | `608fbad` | style: add foundation typography stylesheet |
-| 2026-10-17 | `e25e947` | docs: add typography stylesheet to file map |
-| 2026-10-17 | `777c11c` | style: add brand typography tokens to typography stylesheet |
-| 2026-10-17 | `0086dc7` | style: add muted text styles for topbar in dark and light themes |
-| 2026-10-17 | `efd96dc` | style: add brand text styles for improved topbar layout |
-| 2026-10-17 | `f585793` | style: update title and brand name to include 'Workspace' for consistency |
-| 2026-10-17 | `5db6b8e` | style: fix typo in white-space property and add brand slogan styles |
 | 2026-10-17 | `89e52cb` | style: add inherit color property to brand class for consistency. This prevents the browser's default link color from overriding the topbar's intended text color. |
+| 2026-10-17 | `5db6b8e` | style: fix typo in white-space property and add brand slogan styles |
+| 2026-10-17 | `f585793` | style: update title and brand name to include 'Workspace' for consistency |
+| 2026-10-17 | `efd96dc` | style: add brand text styles for improved topbar layout |
+| 2026-10-17 | `0086dc7` | style: add muted text styles for topbar in dark and light themes |
+| 2026-10-17 | `777c11c` | style: add brand typography tokens to typography stylesheet |
+| 2026-10-17 | `e25e947` | docs: add typography stylesheet to file map |
+| 2026-10-17 | `608fbad` | style: add foundation typography stylesheet |
+| 2026-10-17 | `ddc2045` | style: enhance design tokens with additional gradients, typography, and motion variables |
+| 2026-10-16 | `ecb86ac` | style: add brand identity styles to topbar CSS for improved layout and design |
+| 2026-10-16 | `2462619` | style: update dark and light theme CSS to remove root selector for topbar background |
+| 2026-10-16 | `0535777` | style: update light theme CSS to include root selector for topbar background |
+| 2026-10-16 | `ac9bc17` | style: reorder topbar stylesheet links for improved organization |
+| 2026-10-16 | `e57e677` | style: add theme variables for topbar background and text colors in dark and light modes |
+| 2026-10-16 | `e590397` | style: update topbar section header and enhance CSS structure with detailed comments |
+| 2026-10-16 | `728a1f6` | style: refine comments for visual nesting clarity in topbar CSS |
+| 2026-10-16 | `5df9cb5` | style: add initial topbar CSS structure with visual nesting comments |
+| 2026-10-16 | `3cd38ad` | style: remove unused topbar CSS styles I will write myself , Chatgpt written it while I asked to fix one link |
+| 2026-10-16 | `56b2261` | docs: sync HTML guide with brand home link |
+| 2026-10-16 | `0252d46` | style: group brand logo and text as home link |
+| 2026-10-16 | `d1754a8` | fix: point brand link to V3 homepage |
+| 2026-10-16 | `baf9a0b` | docs: fix markdown formatting in HTML guide |
+| 2026-10-16 | `ba1cec7` | docs: link HTML walkthrough from index |
+| 2026-10-16 | `3085f66` | docs: explain current topbar HTML structure |
+| 2026-10-16 | `d0dc6ea` | docs: enhance index.html with detailed comments and structure for topbar functionality |
+| 2026-10-15 | `15467e8` | docs: update global header structure and branding details in index.html Svg directory fix |
+| 2026-10-15 | `27a4c17` | docs: correct icons section in file map |
+| 2026-10-15 | `b56a708` | revert: restore original FileMap.md |
+| 2026-10-15 | `0a20c05` | docs: update V3 file map |
+| 2026-10-15 | `cd8b8b4` | Add new SVG icons for Lux Omni application |
+| 2026-10-15 | `993d180` | Add new SVG icons for Lux Omni application and loader |
+| 2026-10-15 | `af21c21` | Add Lux topbar CSS and new Lux Omni icon SVG |
+| 2026-10-15 | `e9df66d` | Refactor Lux PDF Viewer Icon SVG structure |
+| 2026-10-15 | `8773e38` | Configure GitHub Actions deployment for Pages |
+| 2026-10-15 | `37c9089` | Update FileMap with current repository structure |
+| 2026-10-15 | `5d36612` | Add Lux PDF viewer icon SVG and update index.html to include it |
+| 2026-10-14 | `3443b45` | Revert PDF diagrams added without approval |
+| 2026-10-14 | `fd97381` | Add PDF workflow flowchart and engineering block diagram |
+| 2026-10-14 | `fd5361e` | Enhance HTML structure with additional comments for clarity |
+| 2026-10-14 | `50171c8` | Correct build log and record verified full vendor import |
+| 2026-10-14 | `9738d7b` | Include every upstream-tracked PDF library file |
+| 2026-10-14 | `cb7c234` | Add temporary exact vendor verification workflow [run-vendor-verify] |
+| 2026-10-14 | `a8d2a1d` | Import full PDF.js and pdf-lib source into vendor |
+| 2026-10-14 | `b641e59` | Add temporary one-time vendor import workflow [run-vendor-import] |
+| 2026-10-14 | `9de3dc7` | Add PDF.js and pdf-lib as unmodified vendor submodules |
+| 2026-10-14 | `22933d1` | Add README.md for third-party dependencies documentation |
+| 2026-10-14 | `aecfba1` | Create 143 empty placeholders from updated FileMap |
+| 2026-10-14 | `7640401` | Remove unused styles.css file |
+| 2026-10-14 | `8dce60f` | File map updated to include new features and improvements. |
+| 2026-10-14 | `d5cb480` | Revert file-map scaffolding changes |
+| 2026-10-14 | `bdbdc23` | Create 107 empty file-map placeholders and update build log |
+| 2026-10-14 | `4c02053` | Add initial HTML structure and create styles.css file |
+| 2026-10-14 | `a11379e` | Files added |
+| 2026-10-14 | `f2fc93c` | Filemap created. |
 
-**History note:** This snapshot preserves commit messages that were returned by GitHub during the 2026-10-17 inspection. Some old scaffold/revert records may be repeated or appear out of chronological context in this snapshot because Git history contains independent branches/reverts; use the live chronological log and commit diffs to determine exact ancestry. Never assume that this table replaces the live commit graph.
+**History note:** This is an inspection snapshot from 2026-10-17. Commit ancestry can include branches and reverts, so use the live commit graph and diffs to understand chronology and intent. The current instruction file's own creation is newer than this snapshot and therefore is not listed above. Update the snapshot only when explicitly asked; always inspect live history for current work.
+
 
 ## 8. Current Working Context at the Time This Document Was Written
 
