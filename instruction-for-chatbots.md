@@ -156,10 +156,11 @@ These are practical reminders: **do only what was requested, ask before expandin
 
 ### Commit messages recorded in the snapshot
 
-The following is the 58-commit history returned by GitHub on 2026-10-17, shown **newest to oldest** and current through parent revision `76a2117cfd905e70999725bc3e5f1078dfa9ab4d`. It is a reference snapshot; check the live Git history before every task. Your task is to update below data before each commit.
+The following is the 59-commit history returned by GitHub on 2026-10-17, shown **newest to oldest** and current through parent revision `f1607456f114f7ca553a449ed02f72589fa7c96e`. It is a reference snapshot; check the live Git history before every task. Your task is to update below data before each commit.
 
 | Date (UTC) | Short SHA | Commit message |
 |---|---|---|
+| 2026-10-17 | `f160745` | docs: record visual foundation progress and append-only log rules |
 | 2026-10-17 | `76a2117` | docs: add chatbot instructions to file map |
 | 2026-10-17 | `268f7a7` | Fix typos in instruction-for-chatbots.md |
 | 2026-10-17 | `ddfbcda` | docs: correct commit history snapshot in chatbot instructions |
@@ -194,7 +195,7 @@ The following is the 58-commit history returned by GitHub on 2026-10-17, shown *
 | 2026-10-15 | `b56a708` | revert: restore original FileMap.md |
 | 2026-10-15 | `0a20c05` | docs: update V3 file map |
 | 2026-10-15 | `cd8b8b4` | Add new SVG icons for Lux Omni application |
-| 2026-10-15 | `993d180` | Add new SVG icons for Lux Omni application and loader |
+| 2026-10-15 | `993d180` | feat: Add new SVG icons for Lux Omni application and loader |
 | 2026-10-15 | `af21c21` | Add Lux topbar CSS and new Lux Omni icon SVG |
 | 2026-10-15 | `e9df66d` | Refactor Lux PDF Viewer Icon SVG structure |
 | 2026-10-15 | `8773e38` | Configure GitHub Actions deployment for Pages |
