@@ -99,3 +99,12 @@ devoloper to manually remove the comments if they ask you explicitly.
    align-items:center;
    gap: 12px;
 }
+/*=========================================
+5. CONNECTION STATUS MONITOR AND DROPDOWN
+=========================================*/
+
+.topbar-connection-control {
+   position: relative;
+   display: inline-flex;
+   align-items: center;
+}
