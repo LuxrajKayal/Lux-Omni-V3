@@ -6,4 +6,6 @@
   --theme-topbar-text: var(--lux-obsidian-canvas);
  /* Rule: In light mode, the topbar muted text uses the medium paint */
   --theme-topbar-muted: var(--lux-slate-700);
+    /* Icon color for light theme */
+  --theme-topbar-icon: var(--lux-cerulean-deep);
 }

@@ -129,3 +129,11 @@ devoloper to manually remove the comments if they ask you explicitly.
    color:inherit;
    cursor: pointer;
 }
+
+.topbar-active-service-icon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex-shrink: 0;
+}

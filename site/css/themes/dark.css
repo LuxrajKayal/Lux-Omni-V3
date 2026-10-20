@@ -1,9 +1,11 @@
 [data-theme="dark"] {
-  /* Rule: In dark mode, the topbar background uses the dark paint */
+/* Rule: In dark mode, the topbar background uses the dark paint */
   --theme-topbar-bg: var(--lux-obsidian-canvas);
   
-  /* Rule: In dark mode, the topbar text uses the light paint */
+/* Rule: In dark mode, the topbar text uses the light paint */
   --theme-topbar-text: var(--lux-slate-50);
 /* Rule: In dark mode, the topbar muted text uses the medium paint */
   --theme-topbar-muted: var(--lux-slate-400);
+/* Icon color for dark theme */
+  --theme-topbar-icon: var(--lux-cyan-bright);
 }
