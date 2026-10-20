@@ -89,3 +89,13 @@ devoloper to manually remove the comments if they ask you explicitly.
     font-size: var(--lux-type-brand-slogan-size);
     line-height: var(--lux-type-brand-slogan-line-height);
 }
+
+/* =========================================
+   4. RIGHT SIDE TOPBAR ACTIONS
+   ========================================= */
+
+.topbar-actions {
+   display:flex;
+   align-items:center;
+   gap: 12px;
+}
