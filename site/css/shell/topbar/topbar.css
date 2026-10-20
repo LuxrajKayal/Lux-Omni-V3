@@ -108,3 +108,24 @@ devoloper to manually remove the comments if they ask you explicitly.
    display: inline-flex;
    align-items: center;
 }
+
+/* =========================================
+   5.1 ROTATING SERVICE STATUS BUTTON
+   ========================================= */
+
+.topbar-connection-button {
+   position:relative;
+   display:inline-flex;
+   align-items:center;
+   justify-content:center;
+   width: 40px;
+   height: 40px;
+   padding:0;
+   box-sizing:border-box;
+
+   border: 1px solid var(--theme-topbar-muted);
+   border-radius: 12px;
+   background-color: transparent;
+   color:inherit;
+   cursor: pointer;
+}
